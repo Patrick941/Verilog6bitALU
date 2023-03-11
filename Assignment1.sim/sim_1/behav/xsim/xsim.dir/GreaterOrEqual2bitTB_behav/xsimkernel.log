@@ -1,0 +1,4 @@
+Running: xsim.dir/GreaterOrEqual2bitTB_behav/xsimk -simmode gui -wdb GreaterOrEqual2bitTB_behav.wdb -simrunnum 0 -socket 47681
+Design successfully loaded
+Design Loading Memory Usage: 32796 KB (Peak: 33372 KB)
+Design Loading CPU Usage: 10 ms
