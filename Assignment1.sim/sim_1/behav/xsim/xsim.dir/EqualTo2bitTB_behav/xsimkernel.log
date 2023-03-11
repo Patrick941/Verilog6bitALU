@@ -1,0 +1,4 @@
+Running: xsim.dir/EqualTo2bitTB_behav/xsimk -simmode gui -wdb EqualTo2bitTB_behav.wdb -simrunnum 0 -socket 51201
+Design successfully loaded
+Design Loading Memory Usage: 32788 KB (Peak: 33368 KB)
+Design Loading CPU Usage: 10 ms

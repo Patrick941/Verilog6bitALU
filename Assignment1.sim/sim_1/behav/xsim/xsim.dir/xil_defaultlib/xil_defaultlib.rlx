@@ -3,6 +3,9 @@
 Dec  6 2018
 23:39:36
 /home/patrick/Assignment1/Assignment1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/GreaterOrEqual2bitTB.v,1678550706,verilog,,,,GreaterOrEqual2bitTB,,,,,,,,
-/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterOrEqual1bit.v,1678550079,verilog,,/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterOrEqual2bit.v,,GreaterOrEqual1bit,,,,,,,,
-/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterOrEqual2bit.v,1678550803,verilog,,/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/GreaterOrEqual2bitTB.v,,GreaterOrEqual2bit,,,,,,,,
+/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/EqualTo2bitTB.v,1678570449,verilog,,,,EqualTo2bitTB,,,,,,,,
+/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/GreaterThan2bitTB.v,1678572910,verilog,,,,GreaterOrEqual2bitTB,,,,,,,,
+/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/EqualTo1bit.v,1678570280,verilog,,/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterThan1bit.v,,EqualTo1bit,,,,,,,,
+/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/EqualTo2bit.v,1678570398,verilog,,/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/EqualTo2bitTB.v,,EqualTo2bit,,,,,,,,
+/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterThan1bit.v,1678572710,verilog,,/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterThan2bit.v,,GreaterThan1bit,,,,,,,,
+/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterThan2bit.v,1678572262,verilog,,/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/GreaterThan2bitTB.v,,GreaterThan2bit,,,,,,,,

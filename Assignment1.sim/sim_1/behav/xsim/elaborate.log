@@ -4,4 +4,13 @@ Running: /home/patrick/Vivado/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 723
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/patrick/Assignment1/Assignment1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.GreaterThan1bit
+Compiling module xil_defaultlib.EqualTo1bit
+Compiling module xil_defaultlib.GreaterThan2bit
+Compiling module xil_defaultlib.GreaterOrEqual2bitTB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot GreaterOrEqual2bitTB_behav

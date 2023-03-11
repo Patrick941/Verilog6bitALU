@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/EqualTo1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EqualTo1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterThan1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GreaterThan1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/GreaterThan2bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GreaterThan2bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/GreaterThan2bitTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GreaterOrEqual2bitTB

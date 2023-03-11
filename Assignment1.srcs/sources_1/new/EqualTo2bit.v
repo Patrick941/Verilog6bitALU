@@ -9,7 +9,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module GreaterThan2bit
+module EqualTo2bit
     (
         input  wire[1:0] a, b,		// a adn b are the two 2-bit numbers to compare
         output wire EqualTo    			// single bit output. Should be high if a adn b the same
@@ -19,7 +19,7 @@ module GreaterThan2bit
     wire EqualTo1, EqualTo0;
     
     // Call to submodules
-    EqualTo1bit eq_bit1_unit (.i0(a[0]), .i1(b[0]), .EqualTo(EqualTo0));
+    EqualTo1bit eq_bit0_unit (.i0(a[0]), .i1(b[0]), .EqualTo(EqualTo0));
     EqualTo1bit eq_bit1_unit (.i0(a[1]), .i1(b[1]), .EqualTo(EqualTo1));
 
     // Check both bits are equal and write answer to EqualTo wire

@@ -15,7 +15,7 @@ module EqualTo2bitTB;
    wire EqualToResult;
 
    // Call 2 bit Greater than and output the value in the waveform
-   EqualTo2bit EQComparatorUnit(.a(testVector0), .b(testVector1), .GreaterThan(EqualToResult));
+   EqualTo2bit EQComparatorUnit(.a(testVector0), .b(testVector1), .EqualTo(EqualToResult));
    
    initial
    begin
