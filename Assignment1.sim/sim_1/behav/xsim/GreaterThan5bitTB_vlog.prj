@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Assignment1.srcs/sources_1/new/EqualTo1bit.v" \
+"../../../../Assignment1.srcs/sources_1/new/EqualTo2bit.v" \
+"../../../../Assignment1.srcs/sources_1/new/GreaterThan1bit.v" \
+"../../../../Assignment1.srcs/sources_1/new/GreaterThan2bit.v" \
+"../../../../Assignment1.srcs/sources_1/new/GreaterThan5bit.v" \
+"../../../../Assignment1.srcs/sim_1/new/GreaterThan5bitTB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

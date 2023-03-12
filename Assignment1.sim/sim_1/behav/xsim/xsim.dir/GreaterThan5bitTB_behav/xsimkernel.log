@@ -1,0 +1,7 @@
+Running: xsim.dir/GreaterThan5bitTB_behav/xsimk -simmode gui -wdb GreaterThan5bitTB_behav.wdb -simrunnum 0 -socket 51347
+Design successfully loaded
+Design Loading Memory Usage: 32804 KB (Peak: 33368 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 114540 KB (Peak: 180076 KB)
+Simulation CPU Usage: 30 ms

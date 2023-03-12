@@ -1,0 +1,12 @@
+
+{ 
+    crc :  4900758369797006637  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 723c7cf444724ee48c0b4d316694dad2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot GreaterThan6bitTB_behav xil_defaultlib.GreaterThan6bitTB xil_defaultlib.glbl" , 
+    buildDate : "Dec  6 2018" , 
+    buildTime : "23:39:36" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/GreaterThan6bitTB_behav/xsimk\"   \"xsim.dir/GreaterThan6bitTB_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/GreaterThan6bitTB_behav/obj/xsim_1.lnx64.o\" -L\"/home/patrick/Vivado/Vivado/2018.3/lib/lnx64.o\" -lrdi_simulator_kernel  -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
