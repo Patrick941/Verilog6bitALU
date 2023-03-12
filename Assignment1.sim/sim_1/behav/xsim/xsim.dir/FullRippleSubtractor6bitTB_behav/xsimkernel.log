@@ -1,0 +1,4 @@
+Running: xsim.dir/FullRippleSubtractor6bitTB_behav/xsimk -simmode gui -wdb FullRippleSubtractor6bitTB_behav.wdb -simrunnum 0 -socket 45391
+Design successfully loaded
+Design Loading Memory Usage: 32816 KB (Peak: 33380 KB)
+Design Loading CPU Usage: 20 ms

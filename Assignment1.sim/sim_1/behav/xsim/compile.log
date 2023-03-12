@@ -1,4 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Assignment1.srcs/sources_1/new/LessThan6bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LessThan6bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Assignment1.srcs/sim_1/new/LessThan6bitTB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LessThan6bitTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/XNOR/XNOR1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XNOR1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/XNOR/XNOR6bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XNOR6bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sim_1/XNOR/XNOR6bitTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XNOR6bitTB
