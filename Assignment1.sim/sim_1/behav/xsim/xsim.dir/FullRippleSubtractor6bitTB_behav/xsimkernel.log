@@ -2,3 +2,6 @@ Running: xsim.dir/FullRippleSubtractor6bitTB_behav/xsimk -simmode gui -wdb FullR
 Design successfully loaded
 Design Loading Memory Usage: 32816 KB (Peak: 33380 KB)
 Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 114552 KB (Peak: 180088 KB)
+Simulation CPU Usage: 20 ms
