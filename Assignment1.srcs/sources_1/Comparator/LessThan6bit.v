@@ -16,11 +16,10 @@ module LessThan6bit
     );
 
     // Wire declerations
-    wire GreaterThan6bit, EqualTo6bit;
+    wire GreaterThanOrEqualTo6bit;
 
     // Call to submodules
-    GreaterThan6bit gt_bit06_unit (.vector0(vector0), .vector1(vector1), .GreaterThan(GreaterThan6bit));
-    EqualTo6bit eq_bit06_unit (.vector0(vector0), .vector1(vector1), .EqualTo(EqualTo6bit));
+    GreaterThanOrEqualTo6bit gt_bit06_unit (.vector0(vector0), .vector1(vector1), .GreaterThanOrEqualTo(GreaterThanOrEqualTo6bit));
 
-    assign LessThan = ~GreaterThan6bit & ~EqualTo6bit;    
+    assign LessThan = ~GreaterThanOrEqualTo6bit;  
 endmodule
