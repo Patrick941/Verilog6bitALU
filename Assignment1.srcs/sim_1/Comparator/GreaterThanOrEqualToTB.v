@@ -25,52 +25,76 @@ module GreaterThanOrEqualTo6bitTB;
       testVector1 = 6'b000000;
       # 50;
       // test vector 1
-      testVector0 = 6'b111110;
+      testVector0 = 6'b111111;
+      testVector1 = 6'b000000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b100000;
       testVector1 = 6'b000000;
       # 50;
       // test vector 1
       testVector0 = 6'b000000;
-      testVector1 = 6'b111110;
+      testVector1 = 6'b100000;
       # 50;
       // test vector 1
-      testVector0 = 6'b011110;
-      testVector1 = 6'b111110;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b111110;
-      testVector1 = 6'b011110;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b001110;
-      testVector1 = 6'b011110;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b011100;
-      testVector1 = 6'b011110;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b011110;
-      testVector1 = 6'b101110;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b111100;
-      testVector1 = 6'b111110;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b111110;
-      testVector1 = 6'b111100;
-      # 50;
-      // test vector 1
-      testVector0 = 6'b000100;
-      testVector1 = 6'b000010;
+      testVector0 = 6'b001000;
+      testVector1 = 6'b100000;
       # 50;
       // test vector 1
       testVector0 = 6'b010000;
+      testVector1 = 6'b000000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b001000;
+      testVector1 = 6'b010000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000000;
+      testVector1 = 6'b010000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b001000;
+      testVector1 = 6'b000000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000000;
       testVector1 = 6'b001000;
       # 50;
       // test vector 1
-      testVector0 = 6'b010000;
+      testVector0 = 6'b000100;
+      testVector1 = 6'b001000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000100;
+      testVector1 = 6'b000000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000000;
       testVector1 = 6'b000100;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000010;
+      testVector1 = 6'b000100;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000010;
+      testVector1 = 6'b000000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000000;
+      testVector1 = 6'b000010;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000001;
+      testVector1 = 6'b000010;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000001;
+      testVector1 = 6'b000000;
+      # 50;
+      // test vector 1
+      testVector0 = 6'b000000;
+      testVector1 = 6'b000001;
       # 50;
       // stop simulation
       $stop;

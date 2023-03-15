@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
-      <Cursor1Time time="400000000fs"></Cursor1Time>
+      <ZoomStartTime time="10066666666fs"></ZoomStartTime>
+      <ZoomEndTime time="10466666667fs"></ZoomEndTime>
+      <Cursor1Time time="10400000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="150"></NameColumnWidth>
-      <ValueColumnWidth column_width="158"></ValueColumnWidth>
+      <ValueColumnWidth column_width="154"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="divider76" type="divider">
       <obj_property name="label">Inputs</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -34,18 +34,75 @@
       <obj_property name="ObjectShortName">inputB[5:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ALU6bitTB/fxn">
-      <obj_property name="ElementShortName">fxn[2:0]</obj_property>
-      <obj_property name="ObjectShortName">fxn[2:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="divider77" type="divider">
       <obj_property name="label">Outputs</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/ALU6bitTB/outputVector">
-      <obj_property name="ElementShortName">outputVector[5:0]</obj_property>
-      <obj_property name="ObjectShortName">outputVector[5:0]</obj_property>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputSelectA">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectA[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectA[5:0]</obj_property>
+      <obj_property name="label">SelectA</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputSelectB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectB[5:0]</obj_property>
+      <obj_property name="label">SelectB</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputSelectNegativeA">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectNegativeA[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectNegativeA[5:0]</obj_property>
+      <obj_property name="label">NegativeA</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputSelectNegativeB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectNegativeB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectNegativeB[5:0]</obj_property>
+      <obj_property name="label">NegativeB</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ALU6bitTB/outputALessThanB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputALessThanB</obj_property>
+      <obj_property name="ObjectShortName">outputALessThanB</obj_property>
+      <obj_property name="label">ALessThanB</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputAxnorB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputAxnorB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputAxnorB[5:0]</obj_property>
+      <obj_property name="label">A XNOR B</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputAplusB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputAplusB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputAplusB[5:0]</obj_property>
+      <obj_property name="label">A + B</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ALU6bitTB/plusOverflow">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">plusOverflow</obj_property>
+      <obj_property name="ObjectShortName">plusOverflow</obj_property>
+      <obj_property name="label">+ overflow</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALU6bitTB/outputAminusB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputAminusB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputAminusB[5:0]</obj_property>
+      <obj_property name="label">A - B</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ALU6bitTB/minusOverflow">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">minusOverflow</obj_property>
+      <obj_property name="ObjectShortName">minusOverflow</obj_property>
+      <obj_property name="label">- overflow</obj_property>
    </wvobject>
 </wave_config>

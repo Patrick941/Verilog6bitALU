@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Mar 13 00:32:04 2023
+| Date         : Wed Mar 15 17:02:22 2023
 | Host         : patrick-Blade running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_timing_summary -max_paths 10 -file ALUPeripheralController_timing_summary_routed.rpt -pb ALUPeripheralController_timing_summary_routed.pb -rpx ALUPeripheralController_timing_summary_routed.rpx -warn_on_violation
 | Design       : ALUPeripheralController
@@ -115,7 +115,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 10 ports with no output delay specified. (HIGH)
+ There are 11 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

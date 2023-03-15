@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar 13 00:31:13 2023
-# Process ID: 114395
+# Start of session at: Wed Mar 15 17:01:31 2023
+# Process ID: 27415
 # Current directory: /home/patrick/Assignment1/Verilog6bitALU/Assignment1.runs/synth_1
 # Command line: vivado -log ALUPeripheralController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALUPeripheralController.tcl
 # Log file: /home/patrick/Assignment1/Verilog6bitALU/Assignment1.runs/synth_1/ALUPeripheralController.vds
@@ -15,7 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 114410 
+INFO: Helper process launched with PID 27430 
+WARNING: [Synth 8-2611] redeclaration of ansi port plusOverflow is not allowed [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:23]
+WARNING: [Synth 8-2611] redeclaration of ansi port minusOverflow is not allowed [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:23]
+WARNING: [Synth 8-976] plusOverflow has already been declared [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:23]
+WARNING: [Synth 8-2654] second declaration of plusOverflow ignored [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:23]
+INFO: [Synth 8-994] plusOverflow is declared here [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:18]
+INFO: [Synth 8-994] minusOverflow is declared here [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:18]
 WARNING: [Synth 8-2611] redeclaration of ansi port overflow is not allowed [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Adder/FullAdder6bit.v:24]
 WARNING: [Synth 8-2611] redeclaration of ansi port carryOut is not allowed [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Adder/FullAdder6bit.v:24]
 WARNING: [Synth 8-976] overflow has already been declared [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Adder/FullAdder6bit.v:24]
@@ -29,7 +35,7 @@ WARNING: [Synth 8-2654] second declaration of overflow ignored [/home/patrick/As
 INFO: [Synth 8-994] overflow is declared here [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Subtractor/FullRippleSubtractor6bit.v:16]
 INFO: [Synth 8-994] carryOut is declared here [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Subtractor/FullRippleSubtractor6bit.v:16]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1345.863 ; gain = 23.523 ; free physical = 8718 ; free virtual = 13776
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1345.867 ; gain = 22.523 ; free physical = 8480 ; free virtual = 15038
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'ALUPeripheralController' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:21]
 INFO: [Synth 8-6157] synthesizing module 'ALU6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:12]
@@ -38,8 +44,10 @@ INFO: [Synth 8-6157] synthesizing module 'FullAdder6bit' [/home/patrick/Assignme
 INFO: [Synth 8-6157] synthesizing module 'FullAdder1bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Adder/FullAdder1bit.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'FullAdder1bit' (1#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Adder/FullAdder1bit.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'FullAdder6bit' (2#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Adder/FullAdder6bit.v:12]
-WARNING: [Synth 8-350] instance 'adder_unit' of module 'FullAdder6bit' requires 5 connections, but only 3 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/TwosComplement/TwosComplementConversion6bit.v:35]
+WARNING: [Synth 8-350] instance 'adder_unit' of module 'FullAdder6bit' requires 5 connections, but only 3 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/TwosComplement/TwosComplementConversion6bit.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'TwosComplementConversion6bit' (3#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/TwosComplement/TwosComplementConversion6bit.v:12]
+WARNING: [Synth 8-350] instance 'Neg_A_unit' of module 'TwosComplementConversion6bit' requires 3 connections, but only 2 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:27]
+WARNING: [Synth 8-350] instance 'Neg_B_unit' of module 'TwosComplementConversion6bit' requires 3 connections, but only 2 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:28]
 INFO: [Synth 8-6157] synthesizing module 'LessThan6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Comparator/LessThan6bit.v:12]
 INFO: [Synth 8-6157] synthesizing module 'GreaterThanOrEqualTo6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Comparator/GreaterThanOrEqualTo6bit.v:12]
 INFO: [Synth 8-6157] synthesizing module 'EqualTo6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Comparator/EqualTo6bit.v:12]
@@ -58,26 +66,36 @@ INFO: [Synth 8-6155] done synthesizing module 'GreaterThan5bit' (9#1) [/home/pat
 INFO: [Synth 8-6155] done synthesizing module 'GreaterThan6bit' (10#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Comparator/GreaterThan6bit.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'GreaterThanOrEqualTo6bit' (11#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Comparator/GreaterThanOrEqualTo6bit.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'LessThan6bit' (12#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Comparator/LessThan6bit.v:12]
+WARNING: [Synth 8-689] width (6) of port connection 'LessThan' does not match port width (1) of module 'LessThan6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:29]
 INFO: [Synth 8-6157] synthesizing module 'XNOR6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/XNOR/XNOR6bit.v:12]
 INFO: [Synth 8-6157] synthesizing module 'XNOR1bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/XNOR/XNOR1bit.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'XNOR1bit' (13#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/XNOR/XNOR1bit.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'XNOR6bit' (14#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/XNOR/XNOR6bit.v:12]
-WARNING: [Synth 8-350] instance 'A_Plus_B_unit' of module 'FullAdder6bit' requires 5 connections, but only 3 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:27]
+WARNING: [Synth 8-350] instance 'A_Plus_B_unit' of module 'FullAdder6bit' requires 5 connections, but only 4 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:31]
 INFO: [Synth 8-6157] synthesizing module 'FullRippleSubtractor6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Subtractor/FullRippleSubtractor6bit.v:12]
+WARNING: [Synth 8-350] instance 'twos_complement_unit' of module 'TwosComplementConversion6bit' requires 3 connections, but only 2 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Subtractor/FullRippleSubtractor6bit.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'FullRippleSubtractor6bit' (15#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Subtractor/FullRippleSubtractor6bit.v:12]
-WARNING: [Synth 8-350] instance 'A_Minus_B_unit' of module 'FullRippleSubtractor6bit' requires 5 connections, but only 3 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:28]
-INFO: [Synth 8-226] default block is never used [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:31]
-WARNING: [Synth 8-567] referenced signal 'NegativeA' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:30]
-WARNING: [Synth 8-567] referenced signal 'NegativeB' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:30]
-WARNING: [Synth 8-567] referenced signal 'LessThan' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:30]
-WARNING: [Synth 8-567] referenced signal 'XNOR' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:30]
-WARNING: [Synth 8-567] referenced signal 'Plus' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:30]
-WARNING: [Synth 8-567] referenced signal 'Minus' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:30]
+WARNING: [Synth 8-350] instance 'A_Minus_B_unit' of module 'FullRippleSubtractor6bit' requires 5 connections, but only 4 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:32]
 INFO: [Synth 8-6155] done synthesizing module 'ALU6bit' (16#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:12]
+WARNING: [Synth 8-689] width (1) of port connection 'outputALessThanB' does not match port width (6) of module 'ALU6bit' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:43]
+WARNING: [Synth 8-350] instance 'ALU_unit' of module 'ALU6bit' requires 13 connections, but only 12 given [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:41]
+INFO: [Synth 8-226] default block is never used [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:67]
+WARNING: [Synth 8-567] referenced signal 'SelectNegativeA' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'SelectNegativeB' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'ALessThanB' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'AxnorB' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'AplusB' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'AminusB' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'plusOverflow' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-567] referenced signal 'minusOverflow' should be on the sensitivity list [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:66]
+WARNING: [Synth 8-3848] Net minusOverflow in module/entity ALUPeripheralController does not have driver. [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:37]
 INFO: [Synth 8-6155] done synthesizing module 'ALUPeripheralController' (17#1) [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:21]
+WARNING: [Synth 8-3331] design ALU6bit has unconnected port fxn[2]
+WARNING: [Synth 8-3331] design ALU6bit has unconnected port fxn[1]
+WARNING: [Synth 8-3331] design ALU6bit has unconnected port fxn[0]
 WARNING: [Synth 8-3331] design ALUPeripheralController has unconnected port led[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1375.113 ; gain = 52.773 ; free physical = 8736 ; free virtual = 13794
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1374.992 ; gain = 51.648 ; free physical = 8497 ; free virtual = 15056
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -90,10 +108,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1375.113 ; gain = 52.773 ; free physical = 8737 ; free virtual = 13795
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1374.992 ; gain = 51.648 ; free physical = 8494 ; free virtual = 15053
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1375.113 ; gain = 52.773 ; free physical = 8737 ; free virtual = 13795
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1374.992 ; gain = 51.648 ; free physical = 8494 ; free virtual = 15053
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -104,34 +122,34 @@ Parsing XDC File [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/cons
 Finished Parsing XDC File [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/constrs_1/new/ALUContstraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/constrs_1/new/ALUContstraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ALUPeripheralController_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/ALUPeripheralController_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.527 ; gain = 0.000 ; free physical = 8492 ; free virtual = 13550
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.398 ; gain = 0.000 ; free physical = 8217 ; free virtual = 14811
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.527 ; gain = 0.000 ; free physical = 8495 ; free virtual = 13553
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.398 ; gain = 0.000 ; free physical = 8221 ; free virtual = 14815
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.527 ; gain = 0.000 ; free physical = 8495 ; free virtual = 13553
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.527 ; gain = 0.000 ; free physical = 8495 ; free virtual = 13553
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.398 ; gain = 0.000 ; free physical = 8221 ; free virtual = 14815
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.398 ; gain = 0.000 ; free physical = 8221 ; free virtual = 14815
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8567 ; free virtual = 13626
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8287 ; free virtual = 14881
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8567 ; free virtual = 13626
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8287 ; free virtual = 14881
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8569 ; free virtual = 13628
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8289 ; free virtual = 14883
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'individualNumber_reg' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'individualNumber_reg' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/Controllers/ALUPeripheralController.v:103]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8559 ; free virtual = 13618
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8288 ; free virtual = 14883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -149,9 +167,10 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit         XORs := 30    
 	   2 Input      1 Bit         XORs := 11    
 +---Muxes : 
-	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -165,9 +184,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      7 Bit       Adders := 1     
 +---Muxes : 
-	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 Module FullAdder1bit 
 Detailed RTL Component Info : 
@@ -197,10 +217,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3917] design ALUPeripheralController has port sections[3] driven by constant 1
 WARNING: [Synth 8-3331] design ALUPeripheralController has unconnected port led[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8544 ; free virtual = 13604
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8269 ; free virtual = 14867
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -212,13 +231,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8427 ; free virtual = 13487
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8145 ; free virtual = 14750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8427 ; free virtual = 13487
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8145 ; free virtual = 14750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -230,7 +249,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -254,7 +273,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -267,7 +286,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -279,25 +298,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -316,12 +335,12 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |     5|
 |3     |LUT1   |     1|
-|4     |LUT2   |     5|
-|5     |LUT3   |     6|
+|4     |LUT2   |     8|
+|5     |LUT3   |     5|
 |6     |LUT4   |    15|
-|7     |LUT5   |     5|
-|8     |LUT6   |    30|
-|9     |MUXF7  |     2|
+|7     |LUT5   |     4|
+|8     |LUT6   |    31|
+|9     |MUXF7  |     3|
 |10    |FDCE   |    20|
 |11    |LD     |     4|
 |12    |IBUF   |    17|
@@ -333,31 +352,31 @@ Report Instance Areas:
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   138|
+|1     |top      |       |   141|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8420 ; free virtual = 13480
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8139 ; free virtual = 14744
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1731.527 ; gain = 52.773 ; free physical = 8473 ; free virtual = 13534
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8473 ; free virtual = 13534
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1731.398 ; gain = 51.648 ; free physical = 8193 ; free virtual = 14798
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8193 ; free virtual = 14798
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.527 ; gain = 0.000 ; free physical = 8428 ; free virtual = 13488
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.398 ; gain = 0.000 ; free physical = 8141 ; free virtual = 14747
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   LD => LDCE: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+53 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1731.527 ; gain = 409.188 ; free physical = 8479 ; free virtual = 13540
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.527 ; gain = 0.000 ; free physical = 8479 ; free virtual = 13540
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1731.398 ; gain = 408.055 ; free physical = 8192 ; free virtual = 14798
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1731.398 ; gain = 0.000 ; free physical = 8192 ; free virtual = 14798
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patrick/Assignment1/Verilog6bitALU/Assignment1.runs/synth_1/ALUPeripheralController.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ALUPeripheralController_utilization_synth.rpt -pb ALUPeripheralController_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 13 00:31:33 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 15 17:01:50 2023...

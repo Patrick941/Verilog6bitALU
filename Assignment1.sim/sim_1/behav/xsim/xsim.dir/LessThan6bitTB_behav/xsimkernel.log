@@ -1,7 +1,7 @@
-Running: xsim.dir/LessThan6bitTB_behav/xsimk -simmode gui -wdb LessThan6bitTB_behav.wdb -simrunnum 0 -socket 55835
+Running: xsim.dir/LessThan6bitTB_behav/xsimk -simmode gui -wdb LessThan6bitTB_behav.wdb -simrunnum 0 -socket 34259
 Design successfully loaded
-Design Loading Memory Usage: 32832 KB (Peak: 33380 KB)
-Design Loading CPU Usage: 10 ms
+Design Loading Memory Usage: 32828 KB (Peak: 33376 KB)
+Design Loading CPU Usage: 30 ms
 Simulation completed
-Simulation Memory Usage: 114568 KB (Peak: 180104 KB)
-Simulation CPU Usage: 10 ms
+Simulation Memory Usage: 114564 KB (Peak: 180100 KB)
+Simulation CPU Usage: 30 ms

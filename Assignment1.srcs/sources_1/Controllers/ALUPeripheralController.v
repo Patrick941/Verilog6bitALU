@@ -27,14 +27,21 @@ module ALUPeripheralController(
     input [2:0] fxn,
     output [15:0] led
     );
-    wire [5:0]result;
+    wire [5:0] SelectA, SelectB, SelectNegativeA, SelectNegativeB, AxnorB, AplusB, AminusB;
+    reg [5:0] outputVector;
+    wire ALessThanB;
     reg [7:0] displayed_number;         // number to be displayed
     reg [3:0] individualNumber;         // Displays a single number between 0 and 9 in one sections of the display
     reg [19:0] refresh_counter;         // 20-bit for creating 10.5ms refresh period or 380Hz refresh rate
     wire [1:0] sectionEnabler;          // Used to seperate which sections of the display should be illuminated at a given time
+    wire plusOverflow, minusOverflow;
+    reg overflow;
 
     // For future Patrick:
-    ALU6bit ALU_unit (.inputA(inputA), .inputB(inputB), .fxn(fxn), .outputVector(result));
+    ALU6bit ALU_unit (.inputA(inputA), .inputB(inputB), .fxn(fxn), .plusOverflow(plusOverflow),
+    .outputSelectA(SelectA), .outputSelectB(SelectB), .outputSelectNegativeA(SelectNegativeA), 
+    .outputSelectNegativeB(SelectNegativeB), .outputALessThanB(ALessThanB), .outputAxnorB(AxnorB), .outputAplusB(AplusB), 
+    .outputAminusB(AminusB));
 
     assign led[15] = inputA[5];
     assign led[14] = inputA[4];
@@ -55,6 +62,26 @@ module ALUPeripheralController(
     // seperate values set to it and it will appear to the human eye as if they are all on
     // at the same time with different numbers whereas they are actually taking turns in the
     // intervals given below
+
+    always @ (inputA or inputB or fxn) begin
+        case (fxn)
+            3'b000:         outputVector = inputA;
+            3'b001:         outputVector = inputB;
+            3'b010:         outputVector = SelectNegativeA;
+            3'b011:         outputVector = SelectNegativeB;
+            3'b100:         outputVector = ALessThanB;
+            3'b101:         outputVector = AxnorB;
+            3'b110:         outputVector = AplusB;
+            3'b111:         outputVector = AminusB;
+            default:            outputVector = 6'bXXXXXX;
+        endcase
+        case (fxn)
+            3'b110:         overflow = plusOverflow;
+            3'b111:         overflow = minusOverflow;
+            default:        overflow = 1'b0;
+        endcase
+    end
+
     always @(posedge clock_100Mhz or posedge reset)
     begin 
         if(reset==1)
@@ -72,24 +99,24 @@ module ALUPeripheralController(
         2'b00: begin
             // Only light sections 1
             sections = 4'b1110;             
-            if(result[5] == 0) begin
-                individualNumber = result[4:0] % 10;
+            if(outputVector[5] == 0) begin
+                individualNumber = outputVector[4:0] % 10;
             end
             else 
-                individualNumber = (64 - result[5:0]) % 10;
+                individualNumber = (64 - outputVector[5:0]) % 10;
         end
         2'b01: begin
             // Only light sections 2
             sections = 4'b1101; 
-            if(result[5] == 0) begin
-                individualNumber = result[4:0] / 10;
+            if(outputVector[5] == 0) begin
+                individualNumber = outputVector[4:0] / 10;
             end
             else 
-                individualNumber = (64 - result[5:0]) / 10;
+                individualNumber = (64 - outputVector[5:0]) / 10;
         end
         2'b10: begin
-            // Only light sections 3
-            if(result[5] == 1) begin
+            // Only light sections 3 and display sign
+            if(outputVector[5] == 1) begin
                 sections = 4'b1011;
                 individualNumber = 4'b1111;
             end
@@ -97,8 +124,12 @@ module ALUPeripheralController(
                 sections = 4'b1111;
         end
         2'b11: begin
-            // Light no sections, can be converted to 4'b0111 if future use is found
-            sections = 4'b1111; 
+            // Only light section 4 and display overflow value
+            if(overflow == 1) begin
+                sections = 4'b0111;
+                individualNumber = 4'b1110;
+            end         
+            else sections = 4'b1111;
         end
         endcase
     end
@@ -119,6 +150,7 @@ module ALUPeripheralController(
         4'b1000: segments = 7'b0000000; // "8"     
         4'b1001: segments = 7'b0000100; // "9" 
         4'b1111: segments = 7'b1111110; // "-"
+        4'b1110: segments = 7'b0110000; // "E"
         default: segments = 7'b0000001; // "0"
         endcase
     end

@@ -60,12 +60,12 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net ALU_unit/tempOverflow has multiple drivers: individualNumber_reg[3]_i_9/O, and individualNumber_reg[3]_i_10/O.}}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]

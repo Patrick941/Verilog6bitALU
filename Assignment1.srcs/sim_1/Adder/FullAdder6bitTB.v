@@ -48,8 +48,8 @@ module FullAdder6bitTB;
         vector1 = 6'b001111;
         # 50;
         // Output should be 011111/ 31
-        vector0 = 6'b000000;
-        vector1 = 6'b000000;    
+        vector0 = 6'b000011;
+        vector1 = 6'b011100;    
         $stop;
     end
 

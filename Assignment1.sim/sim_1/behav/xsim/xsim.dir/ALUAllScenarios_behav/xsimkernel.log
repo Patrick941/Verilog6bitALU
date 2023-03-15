@@ -1,0 +1,4 @@
+Running: xsim.dir/ALUAllScenarios_behav/xsimk -simmode gui -wdb ALUAllScenarios_behav.wdb -simrunnum 0 -socket 45329
+Design successfully loaded
+Design Loading Memory Usage: 32908 KB (Peak: 33396 KB)
+Design Loading CPU Usage: 30 ms

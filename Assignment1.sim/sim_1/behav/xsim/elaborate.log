@@ -1,8 +1,10 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /home/patrick/Vivado/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 723c7cf444724ee48c0b4d316694dad2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU6bitTB_behav xil_defaultlib.ALU6bitTB xil_defaultlib.glbl -log elaborate.log 
+Running: /home/patrick/Vivado/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 723c7cf444724ee48c0b4d316694dad2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALUAllScenarios_behav xil_defaultlib.ALUAllScenarios xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'outputALessThanB' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sim_1/ALU.v/ALUAllScenariosTB.v:22]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 1 for port 'LessThan' [/home/patrick/Assignment1/Verilog6bitALU/Assignment1.srcs/sources_1/ALU6bitSelector/ALU.v:29]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "/home/patrick/Assignment1/Verilog6bitALU/Assignment1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
@@ -11,18 +13,19 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.FullAdder1bit
 Compiling module xil_defaultlib.FullAdder6bit
 Compiling module xil_defaultlib.TwosComplementConversion6bit
-Compiling module xil_defaultlib.GreaterThan1bit
 Compiling module xil_defaultlib.EqualTo1bit
-Compiling module xil_defaultlib.GreaterThan2bit
 Compiling module xil_defaultlib.EqualTo2bit
+Compiling module xil_defaultlib.EqualTo6bit
+Compiling module xil_defaultlib.GreaterThan1bit
+Compiling module xil_defaultlib.GreaterThan2bit
 Compiling module xil_defaultlib.GreaterThan5bit
 Compiling module xil_defaultlib.GreaterThan6bit
-Compiling module xil_defaultlib.EqualTo6bit
+Compiling module xil_defaultlib.GreaterThanOrEqualTo6bit
 Compiling module xil_defaultlib.LessThan6bit
 Compiling module xil_defaultlib.XNOR1bit
 Compiling module xil_defaultlib.XNOR6bit
 Compiling module xil_defaultlib.FullRippleSubtractor6bit
 Compiling module xil_defaultlib.ALU6bit
-Compiling module xil_defaultlib.ALU6bitTB
+Compiling module xil_defaultlib.ALUAllScenarios
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot ALU6bitTB_behav
+Built simulation snapshot ALUAllScenarios_behav

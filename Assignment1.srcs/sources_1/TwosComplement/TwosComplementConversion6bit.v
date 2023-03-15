@@ -12,7 +12,8 @@
 module TwosComplementConversion6bit
     (
         input  wire[5:0] inputVector,		        // a adn b are the two 2-bit numbers to compare
-        output wire[5:0] outputVector    			// single bit output. Should be high if a adn b the same
+        output wire[5:0] outputVector,    			// single bit output. Should be high if a adn b the same
+        output wire errorFlag
     );
 
     // Wire declerations
@@ -30,8 +31,10 @@ module TwosComplementConversion6bit
     assign inversedVector[3] = ~inputVector[3];
     assign inversedVector[4] = ~inputVector[4];
     assign inversedVector[5] = ~inputVector[5];
+    
+    assign errorFlag = inputVector[5] & ~inputVector[4] & ~inputVector[3] & ~inputVector[2] & ~inputVector[1] & ~inputVector[0];
 
     // Call to submodules
-    FullAdder6bit adder_unit (.inputA(inversedVector), .inputB(oneValueVector), .sumOutput(outputVector));
+    FullAdder6bit adder_unit (.inputA(inversedVector), .inputB(6'b000001), .sumOutput(outputVector));
 
 endmodule

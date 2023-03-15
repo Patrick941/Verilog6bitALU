@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ALUAllScenarios_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ALUAllScenarios" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="409311157699fs"></ZoomStartTime>
+      <ZoomEndTime time="409657768461fs"></ZoomEndTime>
+      <Cursor1Time time="409600000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="194"></NameColumnWidth>
+      <ValueColumnWidth column_width="177"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="divider66" type="divider">
+      <obj_property name="label">Inputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/inputA">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">inputA[5:0]</obj_property>
+      <obj_property name="ObjectShortName">inputA[5:0]</obj_property>
+      <obj_property name="label">A</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/inputB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">inputB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">inputB[5:0]</obj_property>
+      <obj_property name="label">B</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider67" type="divider">
+      <obj_property name="label">Outputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputSelectA">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectA[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectA[5:0]</obj_property>
+      <obj_property name="label">SelectA</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputSelectB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectB[5:0]</obj_property>
+      <obj_property name="label">SelectB</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputSelectNegativeA">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectNegativeA[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectNegativeA[5:0]</obj_property>
+      <obj_property name="label">NegativeA</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputSelectNegativeB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputSelectNegativeB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputSelectNegativeB[5:0]</obj_property>
+      <obj_property name="label">NegativeB</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ALUAllScenarios/outputALessThanB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputALessThanB</obj_property>
+      <obj_property name="ObjectShortName">outputALessThanB</obj_property>
+      <obj_property name="label">A &lt; B</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputAxnorB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputAxnorB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputAxnorB[5:0]</obj_property>
+      <obj_property name="label">A XNOR B</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputAplusB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputAplusB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputAplusB[5:0]</obj_property>
+      <obj_property name="label">A + B</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ALUAllScenarios/plusOverflow">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">plusOverflow</obj_property>
+      <obj_property name="ObjectShortName">plusOverflow</obj_property>
+      <obj_property name="label">+ overflow</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ALUAllScenarios/outputAminusB">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">outputAminusB[5:0]</obj_property>
+      <obj_property name="ObjectShortName">outputAminusB[5:0]</obj_property>
+      <obj_property name="label">A - B</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ALUAllScenarios/minusOverflow">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">minusOverflow</obj_property>
+      <obj_property name="ObjectShortName">minusOverflow</obj_property>
+      <obj_property name="label">- overflow</obj_property>
+   </wvobject>
+</wave_config>

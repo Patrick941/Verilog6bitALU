@@ -1,7 +1,7 @@
-Running: xsim.dir/XNOR6bitTB_behav/xsimk -simmode gui -wdb XNOR6bitTB_behav.wdb -simrunnum 0 -socket 48567
+Running: xsim.dir/XNOR6bitTB_behav/xsimk -simmode gui -wdb XNOR6bitTB_behav.wdb -simrunnum 0 -socket 34785
 Design successfully loaded
 Design Loading Memory Usage: 32784 KB (Peak: 33364 KB)
-Design Loading CPU Usage: 20 ms
+Design Loading CPU Usage: 30 ms
 Simulation completed
 Simulation Memory Usage: 114520 KB (Peak: 180056 KB)
-Simulation CPU Usage: 20 ms
+Simulation CPU Usage: 30 ms
