@@ -15,6 +15,7 @@ module XNOR1bit
         output wire sum
     );
 
+    // Perform XNOR operation, assign sum = (i0 & i1) | (~i0 & ~i1) could have been used instead
     assign sum = i0 ~^ i1;
   
 endmodule

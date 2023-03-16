@@ -17,9 +17,7 @@ module FullAdder6bit
     );
     
   
-    // s is the sum of a and b. cout is any carry out bit
-    // wires since just using assign here
-
+    // Declare variables
     wire [5:0]carryOutput, carryIn;
     wire overflow, carryOut;
     
@@ -43,6 +41,7 @@ module FullAdder6bit
     assign carryIn[5] = carryOutput[4];
     FullAdder1bit full_adder_unit6 ( .i0(inputA[5]), .i1(inputB[5]), .cin(carryIn[5]), 
     .cout(carryOutput[5]), .sum(sumOutput[5]));
+    // Carryout and overflow is caluculated
     assign carryOut = carryOutput[5];
     assign overflow = carryOutput[4] ^ carryOutput[5];
     

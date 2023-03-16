@@ -32,6 +32,7 @@ module TwosComplementConversion6bit
     assign inversedVector[4] = ~inputVector[4];
     assign inversedVector[5] = ~inputVector[5];
     
+    // Determine whether input Vector is equal to -32 as -32 cannot have its sign flipped so it will need to be identified
     assign errorFlag = inputVector[5] & ~inputVector[4] & ~inputVector[3] & ~inputVector[2] & ~inputVector[1] & ~inputVector[0];
 
     // Call to submodules

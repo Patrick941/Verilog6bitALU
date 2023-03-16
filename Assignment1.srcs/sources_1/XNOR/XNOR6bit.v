@@ -16,11 +16,7 @@ module XNOR6bit
     );
     
   
-    // s is the sum of a and b. cout is any carry out bit
-    // wires since just using assign here
-    
-    
-    //Ripple adder implementation, carry is passed from carryOutput to carryIn at each step
+    // Get xnor result for each bit interaction and stored in sumOutput
     XNOR1bit XNOR_unit1 ( .i0(inputA[0]), .i1(inputB[0]), .sum(sumOutput[0]));
     XNOR1bit XNOR_unit2 ( .i0(inputA[1]), .i1(inputB[1]), .sum(sumOutput[1]));
     XNOR1bit XNOR_unit3 ( .i0(inputA[2]), .i1(inputB[2]), .sum(sumOutput[2]));

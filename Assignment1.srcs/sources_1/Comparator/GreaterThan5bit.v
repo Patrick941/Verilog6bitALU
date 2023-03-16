@@ -27,7 +27,7 @@ module GreaterThan5bit
    EqualTo2bit eq_bit23_unit (.a(vector0[3:2]), .b(vector1[3:2]), .EqualTo(EqualTo23));
    EqualTo2bit eq_bit01_unit (.a(vector0[1:0]), .b(vector1[1:0]), .EqualTo(EqualTo01));
 
-   // Check if the vectors are greater than or less than for three different submodule calls
+   // Check if the vectors are greater than or less than for three different submodule calls, ripple comparator
    assign MSBGT = GreaterThan4;
    assign SecondMSBGT = EqualTo4 & GreaterThan23;
    assign ThirdMSBGT = EqualTo4 & EqualTo23 & GreaterThan01;

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Wed Mar 15 17:02:22 2023
+| Date             : Thu Mar 16 00:05:13 2023
 | Host             : patrick-Blade running 64-bit Ubuntu 22.04.2 LTS
 | Command          : report_power -file ALUPeripheralController_power_routed.rpt -pb ALUPeripheralController_power_summary_routed.pb -rpx ALUPeripheralController_power_routed.rpx
 | Design           : ALUPeripheralController
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 20.284 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 20.302 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 19.798                           |
+| Dynamic (W)              | 19.816                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.370 |      101 |       --- |             --- |
-|   LUT as Logic |     0.343 |       50 |     20800 |            0.24 |
+| Slice Logic    |     0.371 |      101 |       --- |             --- |
+|   LUT as Logic |     0.344 |       50 |     20800 |            0.24 |
 |   CARRY4       |     0.010 |        5 |      8150 |            0.06 |
 |   Register     |     0.007 |       24 |     41600 |            0.06 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |     0.003 |        3 |     32600 |           <0.01 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.488 |      106 |       --- |             --- |
-| I/O            |    18.941 |       44 |       106 |           41.51 |
+| Signals        |     0.504 |      103 |       --- |             --- |
+| I/O            |    18.941 |       43 |       106 |           40.57 |
 | Static Power   |     0.486 |          |           |                 |
-| Total          |    20.284 |          |           |                 |
+| Total          |    20.302 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.262 |       0.921 |      0.341 |
+| Vccint    |       1.000 |     1.280 |       0.939 |      0.341 |
 | Vccaux    |       1.800 |     0.745 |       0.692 |      0.053 |
 | Vcco33    |       3.300 |     5.344 |       5.343 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,7 +139,7 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| ALUPeripheralController |    19.798 |
+| ALUPeripheralController |    19.816 |
 +-------------------------+-----------+
 
 

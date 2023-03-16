@@ -21,5 +21,6 @@ module LessThan6bit
     // Call to submodules
     GreaterThanOrEqualTo6bit gt_bit06_unit (.vector0(vector0), .vector1(vector1), .GreaterThanOrEqualTo(GreaterThanOrEqualTo6bit));
 
+    // Invert result of greater or equal
     assign LessThan = ~GreaterThanOrEqualTo6bit;  
 endmodule

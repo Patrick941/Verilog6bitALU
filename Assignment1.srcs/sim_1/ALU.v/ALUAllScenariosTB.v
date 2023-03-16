@@ -17,18 +17,20 @@ module ALUAllScenarios;
     wire plusOverflow, minusOverflow, outputALessThanB;
     reg ALessThanBReal;
     
-
+    // CAll ALU
     ALU6bit ALU_unit (.inputA(inputA), .inputB(inputB), .outputSelectA(outputSelectA), .outputSelectB(outputSelectB), 
     .outputSelectNegativeA(outputSelectNegativeA), .outputSelectNegativeB(outputSelectNegativeB), .outputALessThanB(outputALessThanB), 
     .outputAxnorB(outputAxnorB), .outputAplusB(outputAplusB), .outputAminusB(outputAminusB), .plusOverflow(plusOverflow),
     .minusOverflow(minusOverflow));
    
+   // Declare variables for loop, for polling at correct times and for detecting an error
    integer count1 = -32;
    integer count2 = -32;
    integer pollFlag = 0;
    integer error = 0;
    integer signedA, signedB;
    
+   // Functions to detect error for each input change
    always @(pollFlag) begin
         if(inputA >= 32) signedA = -(64 - inputA);
         else signedA = inputA;
@@ -46,6 +48,7 @@ module ALUAllScenarios;
         else if (count1 == 31 && count2 == 32 && error == 0) $monitor("No errors occured at any point in the code");
    end
    
+   // Loop to cycle through all inputs
     initial 
     begin
        while(count1 <= 31) begin

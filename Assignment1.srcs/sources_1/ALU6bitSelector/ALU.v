@@ -18,10 +18,12 @@ module ALU6bit
         output wire plusOverflow, minusOverflow
     );
     
+    //Declare variables
     wire enableA, enableB, enableNegativeA, enableNegativeB, enableLessThan, enableXNOR, enablePlus, enableMinus;
     wire [5:0] NegativeA, NegativeB, XNOR, Plus, Minus;
     wire LessThan, plusOverflow, minusOverflow;
 
+    // Call modules
     assign outputSelectA = inputA;
     assign outputSelectB = inputB;
     TwosComplementConversion6bit Neg_A_unit (.inputVector(inputA), .outputVector(outputSelectNegativeA));

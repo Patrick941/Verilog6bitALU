@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net ALU_unit/tempOverflow has multiple drivers: individualNumber_reg[3]_i_9/O, and individualNumber_reg[3]_i_10/O.}}  -suppress 
 create_project -in_memory -part xc7a35tcpg236-1
 

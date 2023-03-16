@@ -18,11 +18,14 @@ module FullRippleSubtractor6bit
     
   
     // Input B is subtracted from input A
+
+    // Declare variables
     wire [5:0] negativeVectorB;
     wire overflow, carryOut;
     
-    
+    // Convert B to -B
     TwosComplementConversion6bit twos_complement_unit ( .inputVector(inputB), .outputVector(negativeVectorB));
+    // Call to adder with negative B to create effect of A - B
     FullAdder6bit full_adder_unit (.inputA(inputA), .inputB(negativeVectorB), .sumOutput(sumOutput), .overflow(overflow), .carryOut(carryOut));
     
 endmodule

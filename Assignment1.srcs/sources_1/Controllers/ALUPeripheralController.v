@@ -19,8 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ALUPeripheralController(
-    input clock_100Mhz,                 // 100 Mhz clock source found at port
-    input reset,                        // reset
+    input clock,               
     output reg [3:0] sections,           // sections of the display representing each number
     output reg [6:0] segments,          // cathode patterns of the 7-segment LED display
     input [5:0] inputA, inputB,
@@ -37,12 +36,13 @@ module ALUPeripheralController(
     wire plusOverflow, minusOverflow;
     reg overflow;
 
-    // For future Patrick:
+    // Call to ALU module to get outputs for given inputs
     ALU6bit ALU_unit (.inputA(inputA), .inputB(inputB), .fxn(fxn), .plusOverflow(plusOverflow),
     .outputSelectA(SelectA), .outputSelectB(SelectB), .outputSelectNegativeA(SelectNegativeA), 
     .outputSelectNegativeB(SelectNegativeB), .outputALessThanB(ALessThanB), .outputAxnorB(AxnorB), .outputAplusB(AplusB), 
     .outputAminusB(AminusB));
 
+    // Attach LEDs to switches
     assign led[15] = inputA[5];
     assign led[14] = inputA[4];
     assign led[13] = inputA[3];
@@ -82,12 +82,12 @@ module ALUPeripheralController(
         endcase
     end
 
-    always @(posedge clock_100Mhz or posedge reset)
+    // Refresh counter to increment a global variable every time the clock changes, this can then 
+    // be used to calculate a cetain number of clock cycles passed which can be used to calculate
+    // frequency
+    always @(posedge clock)
     begin 
-        if(reset==1)
-            refresh_counter <= 0;
-        else
-            refresh_counter <= refresh_counter + 1;
+        refresh_counter <= refresh_counter + 1;
     end 
     assign sectionEnabler = refresh_counter[19:18];
 

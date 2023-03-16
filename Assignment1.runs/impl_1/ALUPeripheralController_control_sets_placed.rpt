@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Mar 15 17:02:09 2023
+| Date         : Thu Mar 16 00:05:00 2023
 | Host         : patrick-Blade running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_control_sets -verbose -file ALUPeripheralController_control_sets_placed.rpt
 | Design       : ALUPeripheralController
@@ -45,8 +45,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            1 |
-| No           | No                    | Yes                    |              20 |            5 |
+| No           | No                    | No                     |              24 |            9 |
+| No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -60,8 +60,8 @@ Table of Contents
 +----------------------------------+---------------+------------------+------------------+----------------+
 |           Clock Signal           | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------------------------+---------------+------------------+------------------+----------------+
-|  individualNumber_reg[3]_i_2_n_0 |               |                  |                1 |              4 |
-|  clock_100Mhz_IBUF_BUFG          |               | reset_IBUF       |                5 |             20 |
+|  individualNumber_reg[3]_i_2_n_0 |               |                  |                4 |              4 |
+|  clock_IBUF_BUFG                 |               |                  |                5 |             20 |
 +----------------------------------+---------------+------------------+------------------+----------------+
 
 

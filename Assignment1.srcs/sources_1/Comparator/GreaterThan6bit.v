@@ -24,6 +24,7 @@ module GreaterThan6bit
     GreaterThan1bit gt_bit1_unit (.i0(vector0[5]), .i1(vector1[5]), .eq(SignGT));
     EqualTo1bit eq_bit1_unit (.i0(vector0[5]), .i1(vector1[5]), .EqualTo(SignEQ));
 
+    // Determine if positive or negative and if greater or less then and write output
     assign EQSignAndGreater = SignEQ & GreaterThan5bit;
     assign SignLT = ~SignGT & ~SignEQ;
     assign GreaterThan = SignLT | EQSignAndGreater;    
